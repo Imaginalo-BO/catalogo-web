@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FerreMAx: catálogo técnico industrial con precios, stock y fichas de productos de ferretería.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>FerreMAx | Catálogo técnico industrial</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImZtQmciIHgxPSI4IiB5MT0iNiIgeDI9IjU2IiB5Mj0iNTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMTIzQjYzIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDcxQTMzIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZm1BY2NlbnQiIHgxPSIxNCIgeTE9IjE0IiB4Mj0iNTAiIHkyPSI1MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNGRjhBMkIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFODVEMDAiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0idXJsKCNmbUJnKSIvPgogIDxwYXRoIGQ9Im0xNiAyMyA2IDE4IDEwLTEzIDEwIDEzIDYtMTgiIHN0cm9rZT0idXJsKCNmbUFjY2VudCkiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+:root {
+  --orange: #FF6B00;
+  --orange-dark: #E85D00;
+  --orange-light: #FF8A2B;
+  --amber: #FFB000;
+  --ink: #1F2937;
+  --ink-2: #374151;
+  --steel: #4B5563;
+  --steel-2: #6B7280;
+  --bg: #FFFFFF;
+  --bg-alt: #F5F6F8;
+  --line: #E7E9ED;
+  --white: #fff;
+  --shadow-sm: 0 4px 14px rgba(31, 41, 55, .08);
+  --shadow-md: 0 14px 40px rgba(31, 41, 55, .12);
+  --shadow-lg: 0 24px 70px rgba(232, 93, 0, .25);
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --font-head: 'Outfit', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; overflow-x: hidden; overscroll-behavior-x: none; }
+body { font-family: var(--font-body); color: var(--ink); background: var(--bg); overflow-x: hidden; line-height: 1.6; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body.is-locked { overflow: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, select { font-family: inherit; font-size: 1rem; }
+[hidden] { display: none !important; }
+::selection { background: var(--orange); color: #fff; }
+
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--orange), var(--orange-dark)); border-radius: 99px; border: 3px solid var(--bg-alt); }
+
+.container { width: min(1180px, 92%); margin-inline: auto; }
+.highlight { background: linear-gradient(90deg, var(--orange), var(--orange-light)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+.noise { position: fixed; inset: 0; z-index: 2000; pointer-events: none; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); animation: noiseShift .5s steps(3) infinite; }
+@keyframes noiseShift { 0% { transform: translate(0, 0); } 33% { transform: translate(-2%, 1%); } 66% { transform: translate(1%, -2%); } 100% { transform: translate(0, 0); } }
+
+.preloader { position: fixed; inset: 0; z-index: 5000; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #1c1f26, #0e1013); transition: opacity .6s var(--ease), visibility .6s; }
+.preloader.hide { opacity: 0; visibility: hidden; }
+.preloader-inner { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.preloader-nut { width: 84px; height: 84px; animation: nutSpin 2.4s linear infinite; }
+@keyframes nutSpin { to { transform: rotate(360deg); } }
+.preloader-text { font-family: var(--font-head); font-weight: 800; font-size: 1.6rem; letter-spacing: .32em; color: #fff; }
+.preloader-text span { color: var(--orange-light); }
+.preloader-bar { width: 220px; height: 5px; border-radius: 99px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+#preloaderFill { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--orange-light), var(--orange)); transition: width .3s ease; }
+
+.scroll-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0; z-index: 3001; background: linear-gradient(90deg, var(--orange-light), var(--orange), var(--amber)); box-shadow: 0 0 12px rgba(255, 107, 0, .5); }
+
+.btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-head); font-weight: 700; font-size: .98rem; letter-spacing: .02em; padding: 15px 30px; border-radius: 99px; overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s, background .3s, color .3s; will-change: transform; }
+.btn i { transition: transform .3s var(--ease); }
+.btn:hover i { transform: translateX(4px); }
+.btn-primary { background: linear-gradient(120deg, var(--orange), var(--orange-dark)); color: #fff; box-shadow: 0 12px 26px rgba(232, 93, 0, .35); }
+.btn-primary:hover { box-shadow: 0 18px 40px rgba(232, 93, 0, .45); transform: translateY(-3px); }
+.btn-ghost { background: rgba(255, 255, 255, .12); color: #fff; border: 1.5px solid rgba(255, 255, 255, .5); backdrop-filter: blur(8px); }
+.btn-ghost:hover { background: #fff; color: var(--orange-dark); transform: translateY(-3px); }
+.btn-outline { background: var(--bg); color: var(--orange-dark); border: 1.5px solid var(--orange); }
+.btn-outline:hover { background: var(--orange); color: #fff; transform: translateY(-3px); }
+.btn-sm { padding: 10px 20px; font-size: .85rem; }
+.btn-block { width: 100%; }
+.ripple-ink { position: absolute; border-radius: 50%; background: rgba(255, 255, 255, .6); transform: scale(0); animation: ripple .65s ease-out forwards; pointer-events: none; }
+@keyframes ripple { to { transform: scale(3.4); opacity: 0; } }
+
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 3000; padding: 14px 0; transition: padding .35s var(--ease), background .35s, box-shadow .35s; }
+.navbar.scrolled { padding: 8px 0; background: rgba(255, 255, 255, .86); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 6px 30px rgba(31, 41, 55, .08); }
+.navbar:not(.scrolled) .nav-link,
+.navbar:not(.scrolled) .brand-text { color: #fff; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; }
+.brand-logo { width: 44px; height: 44px; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .2)); }
+.brand-text { font-family: var(--font-head); font-weight: 900; font-size: 1.25rem; letter-spacing: .08em; transition: color .3s; }
+.brand-text em { font-style: normal; color: var(--orange); }
+.navbar.scrolled .brand-text em { color: var(--orange-dark); }
+.nav-links { display: flex; gap: 6px; }
+.nav-link { position: relative; font-family: var(--font-head); font-weight: 600; font-size: .92rem; padding: 9px 16px; border-radius: 99px; transition: color .3s; }
+.nav-link::after { content: ""; position: absolute; left: 16px; right: 100%; bottom: 4px; height: 2px; background: var(--orange); border-radius: 2px; transition: right .35s var(--ease); }
+.nav-link:hover::after, .nav-link.active::after { right: 16px; }
+.nav-link:hover, .nav-link.active { color: var(--orange); }
+.navbar:not(.scrolled) .nav-link:hover, .navbar:not(.scrolled) .nav-link.active { color: #fff; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-cta { white-space: nowrap; }
+.menu-toggle { display: none; width: 44px; height: 44px; border-radius: 12px; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .25); }
+.menu-toggle span { display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px; transition: transform .3s var(--ease), opacity .3s; }
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.navbar.scrolled .menu-toggle { background: rgba(31, 41, 55, .06); border-color: var(--line); }
+.navbar.scrolled .menu-toggle span { background: var(--ink); }
+
+.menu-backdrop { position: fixed; inset: 0; z-index: 3490; background: rgba(8, 10, 14, .55); opacity: 0; visibility: hidden; transition: opacity .45s var(--ease), visibility .45s; }
+.menu-backdrop.open { opacity: 1; visibility: visible; }
+.mobile-menu { position: fixed; top: 0; right: 0; bottom: 0; z-index: 3500; width: min(420px, 94vw); background: linear-gradient(160deg, rgba(18, 20, 26, .94), rgba(10, 12, 16, .98)); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-left: 1px solid rgba(255, 255, 255, .08); box-shadow: -30px 0 80px rgba(0, 0, 0, .4); transform: translateX(105%); transition: transform .55s var(--ease); display: flex; flex-direction: column; overflow-y: auto; }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+.mobile-menu-head .brand-text { color: #fff; }
+.mobile-menu-head .brand-logo { width: 38px; height: 38px; }
+.menu-close { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); color: #fff; font-size: 1.15rem; transition: all .3s var(--ease); }
+.menu-close:hover { background: var(--orange); transform: rotate(90deg); }
+.mobile-links { flex: 1; display: flex; flex-direction: column; padding: 14px; gap: 4px; }
+.mobile-link { display: flex; align-items: center; gap: 16px; padding: 14px 16px; border-radius: 14px; border-left: 4px solid transparent; font-family: var(--font-head); font-weight: 600; font-size: 1.02rem; color: rgba(255, 255, 255, .82); opacity: 0; transform: translateX(28px); transition: opacity .5s var(--ease), transform .5s var(--ease), background .3s, color .3s; transition-delay: calc(.06s * var(--i, 0)); }
+.mobile-menu.open .mobile-link { opacity: 1; transform: none; }
+.mobile-link i:first-child { width: 22px; text-align: center; color: var(--orange-light); font-size: 1.05rem; }
+.mobile-link span { flex: 1; }
+.mobile-link i:last-child { font-size: .8rem; color: rgba(255, 255, 255, .35); transition: transform .3s var(--ease), color .3s; }
+.mobile-link:hover { background: rgba(255, 255, 255, .06); color: #fff; }
+.mobile-link:hover i:last-child { transform: translateX(4px); color: var(--orange); }
+.mobile-link.active { background: linear-gradient(120deg, rgba(255, 107, 0, .2), rgba(232, 93, 0, .05)); color: #fff; border-left-color: var(--orange); }
+.mobile-menu-foot { padding: 18px 22px 24px; border-top: 1px solid rgba(255, 255, 255, .08); }
+.mobile-foot-addr { font-size: .82rem; color: rgba(255, 255, 255, .5); display: flex; align-items: center; gap: 8px; justify-content: center; }
+.mobile-foot-addr i { color: var(--orange-light); }
+
+.hero { position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; }
+.hero-slides { position: absolute; inset: 0; }
+.hero-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .9s ease, visibility .9s; }
+.hero-slide.active { opacity: 1; visibility: visible; z-index: 1; }
+.hero-bg { position: absolute; inset: -6%; background-size: cover; background-position: center; transform: scale(1.02); }
+.hero-slide.active .hero-bg { animation: kenburns 7s var(--ease) forwards; }
+@keyframes kenburns { to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); } }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(14, 16, 20, .84) 0%, rgba(14, 16, 20, .56) 45%, rgba(14, 16, 20, .25) 100%); }
+.hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; max-width: 720px; padding-top: 40px; }
+.hero-tag { display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 600; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); background: rgba(255, 176, 0, .1); border: 1px solid rgba(255, 176, 0, .35); padding: 8px 18px; border-radius: 99px; margin-bottom: 22px; backdrop-filter: blur(6px); }
+.hero-title { font-family: var(--font-head); font-weight: 900; font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.04; color: #fff; letter-spacing: -.01em; margin-bottom: 20px; }
+.hero-sub { color: rgba(255, 255, 255, .85); font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 560px; margin-bottom: 34px; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.split-word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.split-inner { display: inline-block; transform: translateY(115%) rotate(4deg); transition: transform .85s var(--ease); }
+.is-in .split-inner { transform: translateY(0) rotate(0); }
+.is-in .split-word { transition: transform .85s var(--ease) var(--d, 0s); }
+.hero-arrows { position: absolute; right: 4%; bottom: 14%; z-index: 5; display: flex; gap: 10px; }
+.hero-arrow { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; color: #fff; border: 1.5px solid rgba(255, 255, 255, .4); backdrop-filter: blur(8px); transition: background .3s, transform .3s, border-color .3s; }
+.hero-arrow:hover { background: var(--orange); border-color: var(--orange); transform: translateY(-4px); }
+.hero-dots { position: absolute; left: 4%; bottom: 15%; z-index: 5; display: flex; gap: 10px; }
+.hero-dot { width: 10px; height: 10px; border-radius: 99px; background: rgba(255, 255, 255, .4); transition: all .35s var(--ease); }
+.hero-dot.active { width: 34px; background: var(--orange); }
+.hero-scroll { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 5; color: #fff; font-size: 1.2rem; animation: bounceDown 2s ease infinite; opacity: .85; }
+@keyframes bounceDown { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 10px); } }
+
+.ticker { background: var(--ink); color: #fff; overflow: hidden; padding: 16px 0; position: relative; z-index: 2; }
+.ticker::before, .ticker::after { content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+.ticker::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+.ticker::after { right: 0; background: linear-gradient(-90deg, var(--ink), transparent); }
+.ticker-track { display: flex; gap: 56px; width: max-content; animation: tick 26s linear infinite; }
+.ticker-track span { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; font-size: 1.02rem; letter-spacing: .06em; white-space: nowrap; }
+.ticker-track i { color: var(--orange-light); }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+.section { padding: clamp(64px, 9vw, 110px) 0; position: relative; }
+.section-alt { background: var(--bg-alt); }
+.section-head { max-width: 640px; margin: 0 auto clamp(36px, 6vw, 52px); text-align: center; }
+.section-eyebrow { display: inline-block; font-family: var(--font-head); font-weight: 700; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+.section-title { font-family: var(--font-head); font-weight: 900; font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.1; letter-spacing: -.01em; margin-bottom: 14px; }
+.section-sub { color: var(--steel); font-size: clamp(.95rem, 1.2vw, 1.05rem); }
+.reveal { opacity: 0; transform: translateY(44px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+.cat-accordion { display: flex; gap: 12px; min-height: 460px; }
+.cat-col { position: relative; flex: 1; min-width: 0; border-radius: var(--r-lg); overflow: hidden; isolation: isolate; transition: flex .65s var(--ease); box-shadow: var(--shadow-sm); text-align: left; }
+.cat-col:hover, .cat-col.active { flex: 3.2; }
+.cat-img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .9s var(--ease); }
+.cat-col:hover .cat-img, .cat-col.active .cat-img { transform: scale(1.12); }
+.cat-veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 12, 16, .05) 30%, rgba(10, 12, 16, .88) 100%); transition: background .5s; }
+.cat-col::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 120% at 0% 100%, var(--acc), transparent 60%); opacity: 0; transition: opacity .5s; z-index: 1; }
+.cat-col:hover::before, .cat-col.active::before { opacity: .85; }
+.cat-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; z-index: 2; color: #fff; display: flex; flex-direction: column; align-items: flex-start; }
+.cat-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 1.3rem; background: rgba(255, 255, 255, .14); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .3); margin-bottom: 14px; transform: translateY(8px); opacity: .9; transition: all .5s var(--ease); }
+.cat-name { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.2rem, 2vw, 1.7rem); margin-bottom: 6px; }
+.cat-text { font-size: .92rem; color: rgba(255, 255, 255, .85); max-width: 280px; opacity: 0; max-height: 0; overflow: hidden; transition: opacity .5s var(--ease), max-height .5s var(--ease); }
+.cat-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-family: var(--font-head); font-weight: 700; font-size: .9rem; background: var(--acc); padding: 9px 18px; border-radius: 99px; transform: translateY(12px); opacity: 0; transition: all .5s var(--ease) .05s; }
+.cat-col:hover .cat-text, .cat-col.active .cat-text { opacity: 1; max-height: 90px; }
+.cat-col:hover .cat-link, .cat-col.active .cat-link { transform: translateY(0); opacity: 1; }
+.cat-col:hover .cat-icon, .cat-col.active .cat-icon { transform: translateY(0); opacity: 1; }
+
+.catalog-tools { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; }
+.cat-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+.cat-tab { font-family: var(--font-head); font-weight: 600; font-size: .9rem; padding: 11px 20px; border-radius: 99px; background: var(--bg); color: var(--steel); border: 1.5px solid var(--line); transition: all .3s var(--ease); white-space: nowrap; }
+.cat-tab small { font-size: .72rem; opacity: .7; margin-left: 4px; }
+.cat-tab:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+.cat-tab.active { background: linear-gradient(120deg, var(--orange), var(--orange-dark)); color: #fff; border-color: transparent; box-shadow: 0 8px 20px rgba(232, 93, 0, .3); }
+.catalog-tools-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.search-box { position: relative; display: flex; align-items: center; }
+.search-box i { position: absolute; left: 18px; color: var(--steel-2); }
+.search-box input { padding: 13px 42px 13px 46px; border-radius: 99px; border: 1.5px solid var(--line); width: min(280px, 62vw); background: var(--bg); outline: none; transition: border-color .3s, box-shadow .3s; }
+.search-box input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255, 107, 0, .12); }
+.search-box kbd { position: absolute; right: 14px; font-family: var(--font-head); font-size: .72rem; color: var(--steel-2); background: var(--bg-alt); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+.tool-btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 18px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--bg); color: var(--steel); font-family: var(--font-head); font-weight: 600; font-size: .88rem; transition: all .3s var(--ease); }
+.tool-btn:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+.sort-field { position: relative; display: inline-flex; align-items: center; }
+.sort-field select { appearance: none; padding: 13px 42px 13px 18px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--bg); color: var(--steel); font-family: var(--font-head); font-weight: 600; font-size: .88rem; outline: none; cursor: pointer; transition: all .3s var(--ease); }
+.sort-field select:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255, 107, 0, .12); }
+.sort-field i { position: absolute; right: 16px; font-size: .72rem; color: var(--steel-2); pointer-events: none; }
+.view-toggle { display: flex; gap: 4px; padding: 4px; border-radius: 99px; background: var(--bg); border: 1.5px solid var(--line); }
+.view-toggle button { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; color: var(--steel-2); transition: all .3s var(--ease); }
+.view-toggle button:hover { color: var(--orange); }
+.view-toggle button.is-active { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: #fff; box-shadow: 0 6px 14px rgba(232, 93, 0, .3); }
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.active-filters:empty { display: none; }
+.active-filter { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 600; font-size: .78rem; color: var(--orange-dark); background: rgba(255, 107, 0, .1); border: 1px solid rgba(255, 107, 0, .25); border-radius: 99px; padding: 6px 8px 6px 14px; }
+.active-filter button { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 107, 0, .14); font-size: .65rem; }
+.active-filter button:hover { background: var(--orange); color: #fff; }
+.result-count { font-family: var(--font-head); font-size: .8rem; color: var(--steel-2); letter-spacing: .04em; margin-bottom: 8px; }
+
+.catalog-rail { position: relative; display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.pcard-rail { flex: 1; min-width: 0; display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x proximity; padding: 8px 4px 24px; cursor: grab; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.pcard-rail::-webkit-scrollbar { display: none; }
+.pcard-rail .pcard-wrap { flex: 0 0 clamp(240px, 26vw, 282px); scroll-snap-align: start; opacity: 0; }
+.pcard-rail.dealt .pcard-wrap { opacity: 1; animation: railIn .6s var(--ease) backwards; animation-delay: var(--deal-delay, 0s); }
+@keyframes railIn { from { opacity: 0; transform: translateX(60px) rotateY(24deg) scale(.92); } to { opacity: 1; transform: translateX(0) rotateY(0) scale(1); } }
+.pcard-wrap { perspective: 1100px; transform: rotate(var(--deal-rot, 0deg)); transition: transform .35s var(--ease); }
+.pcard-wrap:hover { transform: rotate(0deg) translateY(-6px); }
+.pcard-rail.is-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); overflow: visible; padding-bottom: 10px; }
+.pcard-rail.is-grid .pcard-wrap { flex: none; width: 100%; opacity: 1; transform: none; animation: none; }
+.pcard-rail.is-list { flex-direction: column; overflow: visible; }
+.pcard-rail.is-list .pcard-wrap { flex: none; width: 100%; opacity: 1; transform: none; animation: none; }
+.pcard-rail.is-list .pcard { display: grid; grid-template-columns: 220px 1fr; }
+.pcard-rail.is-list .pcard-media { aspect-ratio: auto; min-height: 220px; }
+.rail-arrow { flex: none; width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); box-shadow: 0 10px 22px rgba(232, 93, 0, .32); transition: all .3s var(--ease); }
+.rail-arrow:hover:not(:disabled) { transform: translateY(-2px) scale(1.06); }
+.rail-arrow:disabled { background: #e5e7eb; color: #9ca3af; box-shadow: none; cursor: not-allowed; }
+.rail-count { position: absolute; right: 6px; bottom: 0; font-family: var(--font-head); font-weight: 800; font-size: .8rem; color: var(--steel-2); letter-spacing: .04em; }
+
+.pcard { position: relative; background: var(--bg); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); transform-style: preserve-3d; transition: box-shadow .4s; will-change: transform; height: 100%; }
+.pcard:hover { box-shadow: var(--shadow-md); }
+.pcard-shine { position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0; transition: opacity .4s; background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .5), transparent 55%); }
+.pcard:hover .pcard-shine { opacity: 1; }
+.pcard-media { position: relative; aspect-ratio: 1 / 1.05; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, var(--media-1, #FFF3E6), var(--media-2, #FFE0C2)); }
+.pcard-media::before { content: ""; position: absolute; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, .55), transparent 70%); }
+.pcard-emoji { position: relative; font-size: 4.4rem; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .18)); transition: transform .5s var(--ease); }
+.pcard:hover .pcard-emoji { transform: scale(1.16) rotate(-6deg); }
+.pcard-badge { position: absolute; top: 14px; left: 14px; z-index: 3; font-family: var(--font-head); font-weight: 800; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; padding: 7px 14px; border-radius: 99px; color: #fff; }
+.pcard-badge.b-hot { background: linear-gradient(120deg, #ef4444, #dc2626); }
+.pcard-badge.b-offer { background: linear-gradient(120deg, #10b981, #059669); }
+.pcard-badge.b-new { background: linear-gradient(120deg, #6366f1, #4f46e5); }
+.pcard-badge.b-premium { background: linear-gradient(120deg, #d97706, #b45309); }
+.pcard-cat { position: absolute; bottom: 12px; right: 12px; z-index: 3; font-family: var(--font-head); font-weight: 700; font-size: .72rem; letter-spacing: .05em; padding: 6px 12px; border-radius: 99px; color: #fff; background: var(--pcard-cat, var(--orange)); box-shadow: 0 6px 14px rgba(0, 0, 0, .18); }
+.pcard-cat i { margin-right: 5px; }
+.pcard-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.pcard-sku { font-family: var(--font-head); font-weight: 600; font-size: .7rem; letter-spacing: .08em; color: var(--steel-2); }
+.pcard-name { font-family: var(--font-head); font-weight: 700; font-size: 1.02rem; line-height: 1.25; }
+.pcard-desc { font-size: .85rem; color: var(--steel-2); min-height: 20px; }
+.pcard-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.pcard-prices { display: flex; flex-direction: column; gap: 6px; }
+.pcard-price { font-family: var(--font-head); font-weight: 900; font-size: 1.22rem; color: var(--orange-dark); }
+.pcard-price small { font-weight: 700; font-size: .8rem; color: var(--steel-2); text-decoration: line-through; margin-right: 6px; }
+.info-btn { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; color: #fff; font-size: 1.05rem; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); box-shadow: 0 8px 18px rgba(232, 93, 0, .32); transition: transform .3s var(--ease), box-shadow .3s; }
+.info-btn:hover { transform: translateY(-3px) scale(1.06); box-shadow: 0 12px 26px rgba(232, 93, 0, .4); }
+.pcard-stock { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 700; font-size: .78rem; letter-spacing: .02em; }
+.pcard-stock::before { content: ""; width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.pcard-stock.st-ok { color: #059669; }
+.pcard-stock.st-ok::before { background: #10b981; box-shadow: 0 0 0 4px rgba(16, 185, 129, .16); }
+.pcard-stock.st-mid { color: #b45309; }
+.pcard-stock.st-mid::before { background: #f59e0b; box-shadow: 0 0 0 4px rgba(245, 158, 11, .16); }
+.pcard-stock.st-low { color: #dc2626; }
+.pcard-stock.st-low::before { background: #ef4444; box-shadow: 0 0 0 4px rgba(239, 68, 68, .16); animation: stockPulse 1.2s ease-in-out infinite; }
+.pcard-stock.st-out { color: #9ca3af; }
+.pcard-stock.st-out::before { background: #9ca3af; }
+@keyframes stockPulse { 50% { opacity: .4; } }
+.no-results { display: none; text-align: center; color: var(--steel); padding: 40px 20px; }
+.no-results.show { display: block; }
+.no-results h3 { font-family: var(--font-head); font-size: 1.4rem; margin-bottom: 8px; }
+.no-results p { margin-bottom: 18px; }
+
+.filter-backdrop { position: fixed; inset: 0; z-index: 3550; background: rgba(10, 12, 16, .58); backdrop-filter: blur(4px); }
+.filter-panel { position: fixed; top: 0; right: 0; bottom: 0; z-index: 3600; width: min(400px, 94vw); background: linear-gradient(160deg, rgba(18, 20, 26, .96), rgba(10, 12, 16, .98)); color: rgba(255, 255, 255, .88); border-left: 1px solid rgba(255, 255, 255, .08); box-shadow: -30px 0 80px rgba(0, 0, 0, .4); transform: translateX(105%); transition: transform .55s var(--ease); display: flex; flex-direction: column; overflow-y: auto; }
+.filter-panel.is-open { transform: translateX(0); }
+.panel-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+.panel-head h2 { font-family: var(--font-head); font-weight: 900; font-size: 1.3rem; color: #fff; }
+.panel-close { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); color: #fff; font-size: 1rem; transition: all .3s var(--ease); }
+.panel-close:hover { background: var(--orange); transform: rotate(90deg); }
+.panel-group { padding: 20px 22px; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+.panel-group h3 { font-family: var(--font-head); font-weight: 700; font-size: .95rem; color: #fff; margin-bottom: 14px; }
+.check-list { display: grid; gap: 8px; }
+.check-row { position: relative; display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgba(255, 255, 255, .04); cursor: pointer; font-family: var(--font-head); font-weight: 600; font-size: .88rem; transition: background .3s, color .3s; }
+.check-row:hover { background: rgba(255, 255, 255, .08); }
+.check-row input { position: absolute; opacity: 0; pointer-events: none; }
+.check-mark { width: 18px; height: 18px; flex: none; border-radius: 5px; border: 1.5px solid rgba(255, 255, 255, .35); display: grid; place-items: center; transition: all .3s; }
+.check-row input[type="radio"] + .check-mark { border-radius: 50%; }
+.check-row input:checked ~ .check-mark { background: var(--orange); border-color: var(--orange); }
+.check-row input:checked ~ .check-mark::after { content: ""; width: 5px; height: 9px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.check-row input[type="radio"]:checked ~ .check-mark::after { width: 6px; height: 6px; border: none; border-radius: 50%; background: #fff; transform: none; }
+.price-output { display: inline-block; font-family: var(--font-head); font-weight: 800; color: var(--orange-light); margin-bottom: 10px; }
+.range-input { width: 100%; accent-color: var(--orange); cursor: pointer; }
+.range-ends { display: flex; justify-content: space-between; font-size: .76rem; color: rgba(255, 255, 255, .5); margin-top: 4px; }
+.filter-panel > .btn { margin: 20px 22px calc(22px + env(safe-area-inset-bottom)); }
+
+.drawer-backdrop { position: fixed; inset: 0; z-index: 3550; background: rgba(10, 12, 16, .58); backdrop-filter: blur(4px); }
+.product-drawer { position: fixed; top: 0; right: 0; height: 100%; width: min(460px, 100vw); z-index: 3600; background: #fff; box-shadow: -20px 0 60px rgba(0, 0, 0, .25); transform: translateX(105%); transition: transform .55s var(--ease); }
+.product-drawer.is-open { transform: translateX(0); }
+.drawer-inner { height: 100%; overflow-y: auto; padding: 22px 24px calc(30px + env(safe-area-inset-bottom)); }
+.drawer-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.drawer-top strong { display: block; font-family: var(--font-head); font-size: 1rem; color: var(--orange-dark); }
+.drawer-close { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--bg-alt); font-size: 1rem; transition: all .3s; }
+.drawer-close:hover { background: #fee2d5; color: var(--orange-dark); transform: rotate(90deg); }
+.drawer-art-wrap { position: relative; aspect-ratio: 1.5 / 1; border-radius: var(--r-md); overflow: hidden; display: grid; place-items: center; margin: 20px 0; background: linear-gradient(145deg, var(--media-1, #FFF3E6), var(--media-2, #FFE0C2)); transition: transform .4s var(--ease); }
+.drawer-art-wrap::before { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; border: 2px dashed rgba(255, 255, 255, .6); }
+.drawer-emoji { position: relative; font-size: 5.4rem; filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .2)); }
+.drawer-head .cat-label { font-family: var(--font-head); font-weight: 700; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); }
+.drawer-head h2 { font-family: var(--font-head); font-weight: 900; font-size: 1.55rem; line-height: 1.2; margin: 6px 0 8px; }
+.drawer-head p { color: var(--steel); font-size: .92rem; }
+.drawer-price { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
+.drawer-price strong { font-family: var(--font-head); font-weight: 900; font-size: 1.7rem; color: var(--orange-dark); }
+.drawer-price small { font-family: var(--font-head); font-weight: 700; color: var(--steel-2); text-decoration: line-through; }
+.drawer-stock { font-family: var(--font-head); font-weight: 700; font-size: .78rem; border-radius: 99px; padding: 6px 12px; }
+.drawer-stock.st-ok { background: rgba(16, 185, 129, .12); color: #059669; }
+.drawer-stock.st-mid { background: rgba(245, 158, 11, .14); color: #b45309; }
+.drawer-stock.st-low { background: rgba(239, 68, 68, .12); color: #dc2626; }
+.drawer-stock.st-out { background: rgba(156, 163, 175, .16); color: #6b7280; }
+.drawer-section { border-top: 1px solid var(--line); padding-top: 18px; }
+.drawer-section h3 { font-family: var(--font-head); font-weight: 800; font-size: 1rem; margin-bottom: 12px; }
+.spec-list { display: grid; gap: 8px; }
+.spec-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: var(--ink-2); }
+.spec-list i { color: var(--orange); margin-top: 4px; }
+.drawer-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.drawer-actions .btn { flex: 1; min-width: 150px; }
+
+.footer { background: #0e1013; color: rgba(255, 255, 255, .78); padding: 70px 0 0; position: relative; overflow: hidden; }
+.footer::before { content: ""; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(var(--orange), transparent 70%); opacity: .08; top: -200px; right: -150px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: clamp(28px, 5vw, 40px); padding-bottom: 50px; position: relative; z-index: 1; }
+.footer .brand-text { color: #fff; }
+.footer .brand-logo { width: 38px; height: 38px; }
+.footer-brand p { margin-top: 16px; font-size: .95rem; max-width: 320px; }
+.footer-brand code { font-size: .82rem; color: var(--orange-light); }
+.footer-col h4 { font-family: var(--font-head); font-weight: 800; color: #fff; margin-bottom: 18px; font-size: 1.05rem; }
+.footer-col a, .footer-col p { display: block; padding: 5px 0; transition: color .3s, transform .3s var(--ease); }
+.footer-col a:hover { color: var(--orange-light); transform: translateX(6px); }
+.footer-col p i { color: var(--orange-light); width: 18px; }
+.footer-bottom { border-top: 1px solid rgba(255, 255, 255, .1); padding: 22px 0; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .86rem; position: relative; z-index: 1; max-width: min(1180px, 92%); margin-inline: auto; }
+
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translate(-50%, 160%); z-index: 4000; background: var(--ink); color: #fff; padding: 16px 26px; border-radius: 99px; font-weight: 600; display: flex; align-items: center; gap: 12px; box-shadow: 0 20px 50px rgba(0, 0, 0, .3); transition: transform .5s var(--ease); max-width: 92vw; }
+.toast.show { transform: translate(-50%, 0); }
+.toast i { color: var(--orange-light); }
+.back-top { position: fixed; bottom: 26px; left: 26px; z-index: 3200; width: 52px; height: 52px; border-radius: 14px; background: var(--ink); color: #fff; font-size: 1.1rem; display: grid; place-items: center; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all .4s var(--ease); }
+.back-top.show { opacity: 1; visibility: visible; transform: none; }
+.back-top:hover { background: var(--orange); }
+.noscript { position: fixed; inset: auto 16px 16px; z-index: 5000; background: var(--ink); color: #fff; padding: 16px 20px; border-radius: var(--r-sm); text-align: center; }
+
+@media (max-width: 1180px) {
+  .nav-link { padding: 9px 13px; font-size: .88rem; }
+  .nav-link::after { left: 13px; }
+  .nav-link:hover::after, .nav-link.active::after { right: 13px; }
+}
+@media (max-width: 1024px) {
+  .navbar { padding: 12px 0; }
+  .navbar.scrolled { padding: 7px 0; }
+  .brand-logo { width: 38px; height: 38px; }
+  .brand-text { font-size: 1.04rem; letter-spacing: .05em; }
+  .nav-links { gap: 3px; }
+  .nav-link { padding: 8px 11px; font-size: .8rem; }
+  .nav-link::after { left: 11px; }
+  .nav-link:hover::after, .nav-link.active::after { right: 11px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .cat-accordion { flex-direction: column; min-height: 0; gap: 10px; }
+  .cat-col { min-height: 132px; flex: none; }
+  .cat-col:hover, .cat-col.active { flex: none; }
+  .cat-text { display: none; }
+  .cat-link { margin-top: 6px; }
+}
+@media (max-width: 900px) {
+  .navbar .brand-text { display: none; }
+  .nav-actions { gap: 8px; }
+}
+@media (max-width: 768px) {
+  html { scroll-padding-top: 56px; }
+  .navbar .brand-text { display: block; }
+  .nav-links { display: none; }
+  .menu-toggle { display: flex; }
+  .pcard-rail { scroll-snap-type: x mandatory; }
+  .rail-arrow { width: 40px; height: 40px; }
+  .catalog-tools { margin-bottom: 30px; }
+  .noise { animation: none; }
+  .hero-slide.active .hero-bg { animation-duration: 10s; }
+  .pcard-rail.is-list .pcard { grid-template-columns: 1fr; }
+  .pcard-rail.is-list .pcard-media { aspect-ratio: 1 / .8; min-height: 0; }
+}
+@media (hover: none) {
+  .cat-col:hover .cat-img, .cat-col.active .cat-img { transform: none; }
+  .btn:hover i { transform: none; }
+  .pcard:hover .pcard-emoji { transform: none; }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { height: auto; min-height: 100vh; min-height: 100svh; }
+  .hero-content { padding-top: 90px; padding-bottom: 130px; }
+  .hero-arrows, .hero-dots, .hero-scroll { display: none; }
+}
+@media (max-width: 560px) {
+  .section { padding: 70px 0; }
+  .hero-arrows { right: 6%; bottom: 20%; }
+  .hero-dots { left: 6%; bottom: 21%; }
+  .hero-cta .btn { width: 100%; }
+  .catalog-tools { flex-direction: column; align-items: stretch; gap: 14px; margin-bottom: 26px; }
+  .cat-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .cat-tabs::-webkit-scrollbar { display: none; }
+  .cat-tab { flex: none; padding: 10px 16px; font-size: .85rem; }
+  .catalog-tools-right { display: grid; grid-template-columns: 1fr auto; }
+  .search-box { grid-column: 1 / -1; }
+  .search-box input { width: 100%; }
+  .sort-field select { width: 100%; }
+  .catalog-rail { gap: 10px; }
+  .rail-arrow { display: none; }
+  .pcard-rail .pcard-wrap { flex-basis: clamp(215px, 72vw, 282px); }
+  .rail-count { font-size: .74rem; }
+  .pcard-body { padding: 14px 14px 16px; }
+  .pcard-emoji { font-size: 3.6rem; }
+  .info-btn { width: 44px; height: 44px; }
+  .navbar { padding: 10px 0; }
+  .navbar.scrolled { padding: 6px 0; }
+  .brand-logo { width: 38px; height: 38px; }
+  .brand-text { font-size: 1.02rem; }
+  .nav-cta { display: none; }
+  .hero-title { font-size: clamp(2.15rem, 8.5vw, 2.9rem); }
+  .hero-sub { font-size: 1rem; }
+  .hero-tag { font-size: .74rem; padding: 7px 14px; }
+  .hero-arrow { width: 46px; height: 46px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { justify-content: center; text-align: center; }
+  .drawer-inner { padding-inline: 18px; }
+  .mobile-menu-head { padding: 16px 18px; }
+  .mobile-menu-foot { padding: 16px 18px calc(22px + env(safe-area-inset-bottom)); }
+  .mobile-links { padding: 10px; }
+}
+@media (max-width: 480px) {
+  .section { padding: 60px 0; }
+  .hero { min-height: 520px; }
+  .hero-title { font-size: clamp(1.9rem, 9.5vw, 2.55rem); }
+  .hero-sub { font-size: .95rem; margin-bottom: 26px; }
+  .hero-tag { font-size: .7rem; padding: 6px 12px; margin-bottom: 16px; }
+  .hero-arrows { bottom: 24%; gap: 8px; }
+  .hero-dots { bottom: 25%; }
+  .hero-arrow { width: 42px; height: 42px; font-size: .9rem; }
+  .hero-cta { gap: 12px; }
+  .hero-cta .btn { padding: 13px 22px; font-size: .9rem; }
+  .ticker { padding: 12px 0; }
+  .ticker-track { gap: 40px; }
+  .ticker-track span { font-size: .88rem; }
+  .section-head { margin-bottom: 30px; }
+  .section-title { font-size: clamp(1.6rem, 7.5vw, 2rem); }
+  .pcard-rail .pcard-wrap { flex-basis: 82vw; }
+  .pcard-emoji { font-size: 3.2rem; }
+  .btn { padding: 13px 24px; font-size: .92rem; }
+  .btn-sm { padding: 9px 16px; }
+  .back-top { bottom: calc(20px + env(safe-area-inset-bottom)); left: 20px; }
+  .toast { bottom: calc(24px + env(safe-area-inset-bottom)); }
+  .mobile-menu { width: 100vw; }
+  .mobile-link { padding: 13px 14px; font-size: .98rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}
+
+</style>
+</head>
+<body>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-nut">
+        <svg viewBox="0 0 64 64" width="70" height="70">
+          <g fill="none" stroke="url(#pgrad)" stroke-width="6" stroke-linecap="round">
+            <defs><linearGradient id="pgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A2B"/><stop offset="1" stop-color="#E85D00"/></linearGradient></defs>
+            <circle cx="32" cy="32" r="22"/>
+            <path d="M32 4v12M32 48v12M4 32h12M48 32h12M11.5 11.5l8.5 8.5M44 44l8.5 8.5M52.5 11.5L44 20M20 44l-8.5 8.5"/>
+          </g>
+        </svg>
+      </div>
+      <p class="preloader-text">FERRE<span>MAX</span></p>
+      <div class="preloader-bar"><span id="preloaderFill"></span></div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      var p = document.getElementById('preloader');
+      if (p) p.classList.add('hide');
+    }, 3500);
+  </script>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="FerreMAx, ir al inicio">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImZtTmF2eSIgeDE9IjgiIHkxPSI2IiB4Mj0iNTYiIHkyPSI1OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiMxMjNCNjMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwNzFBMzMiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmbU9yYW5nZSIgeDE9IjE0IiB5MT0iMTQiIHgyPSI1MCIgeTI9IjUwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iI0ZGOEEyQiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0U4NUQwMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik0zMiAzIDU3IDE3LjV2MjlMMzIgNjEgNyA0Ni41di0yOUwzMiAzWiIgZmlsbD0idXJsKCNmbU5hdnkpIiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxwYXRoIGQ9Im0yMCAyNCA2IDE2IDYtMTIgNiAxMiA2LTE2IiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjUuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wOCIvPgo8L3N2Zz4K" alt="" class="brand-logo">
+        <span class="brand-text">FERRE<em>MAX</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#categorias" class="nav-link">Categorías</a>
+        <a href="#productos" class="nav-link">Productos</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#productos" class="btn btn-primary btn-sm btn-ripple btn-magnetic nav-cta">Explorar <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-head">
+      <a href="#inicio" class="brand">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImZtTmF2eSIgeDE9IjgiIHkxPSI2IiB4Mj0iNTYiIHkyPSI1OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiMxMjNCNjMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwNzFBMzMiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmbU9yYW5nZSIgeDE9IjE0IiB5MT0iMTQiIHgyPSI1MCIgeTI9IjUwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iI0ZGOEEyQiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0U4NUQwMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik0zMiAzIDU3IDE3LjV2MjlMMzIgNjEgNyA0Ni41di0yOUwzMiAzWiIgZmlsbD0idXJsKCNmbU5hdnkpIiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxwYXRoIGQ9Im0yMCAyNCA2IDE2IDYtMTIgNiAxMiA2LTE2IiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjUuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wOCIvPgo8L3N2Zz4K" alt="" class="brand-logo">
+        <span class="brand-text">FERRE<em>MAX</em></span>
+      </a>
+      <button class="menu-close" id="menuClose" type="button" aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mobile-links" aria-label="Navegación móvil">
+      <a href="#inicio" class="mobile-link" style="--i:0"><i class="fa-solid fa-house"></i><span>Inicio</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#categorias" class="mobile-link" style="--i:1"><i class="fa-solid fa-shapes"></i><span>Categorías</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#productos" class="mobile-link" style="--i:2"><i class="fa-solid fa-box-open"></i><span>Productos</span><i class="fa-solid fa-chevron-right"></i></a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <p class="mobile-foot-addr"><i class="fa-solid fa-store"></i> <span id="footerAddressMobile">Av. Principal #1234, zona Central</span></p>
+    </div>
+  </div>
+
+  <section class="hero" id="inicio">
+    <div class="hero-slides">
+      <div class="hero-slide active">
+        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1800&q=80')"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">Catálogo técnico · Actualizado 2026</span>
+          <h1 class="hero-title">Todo para tu <span class="highlight">obra</span> y hogar</h1>
+          <p class="hero-sub">Herramientas, materiales y soluciones FerreMAx con precio y stock visible.</p>
+          <div class="hero-cta">
+            <a href="#productos" class="btn btn-primary btn-ripple btn-magnetic">Explorar inventario <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#categorias" class="btn btn-ghost btn-ripple btn-magnetic">Ver categorías</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=1800&q=80')"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">Stock visible en cada ficha</span>
+          <h1 class="hero-title">Encuentra lo que <span class="highlight">necesitas</span></h1>
+          <p class="hero-sub">Filtra por categoría, compara precios y abre la ficha técnica de cada producto.</p>
+          <div class="hero-cta">
+            <a href="#productos" class="btn btn-primary btn-ripple btn-magnetic">Ver productos <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#categorias" class="btn btn-ghost btn-ripple btn-magnetic">Explorar por categoría</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1800&q=80')"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">31 productos · 5 categorías</span>
+          <h1 class="hero-title">Compara rápido y <span class="highlight">decide mejor</span></h1>
+          <p class="hero-sub">Un catálogo claro, técnico y directo para revisar disponibilidad al instante.</p>
+          <div class="hero-cta">
+            <a href="#productos" class="btn btn-primary btn-ripple btn-magnetic">Abrir catálogo <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#categorias" class="btn btn-ghost btn-ripple btn-magnetic">Ver rubros</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-arrows">
+      <button class="hero-arrow prev" id="heroPrev" type="button" aria-label="Diapositiva anterior"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="hero-arrow next" id="heroNext" type="button" aria-label="Diapositiva siguiente"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="hero-dots" id="heroDots" aria-label="Diapositivas del catálogo"></div>
+    <a href="#categorias" class="hero-scroll" aria-label="Desplazarse a categorías"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <div class="ticker" aria-label="Categorías del catálogo">
+    <div class="ticker-track" id="tickerTrack">
+      <span><i class="fa-solid fa-hammer"></i> Herramientas</span>
+      <span><i class="fa-solid fa-paint-roller"></i> Pinturas</span>
+      <span><i class="fa-solid fa-faucet-drip"></i> Plomería</span>
+      <span><i class="fa-solid fa-bolt"></i> Electricidad</span>
+      <span><i class="fa-solid fa-lock"></i> Seguridad</span>
+      <span><i class="fa-solid fa-box-open"></i> Stock visible</span>
+      <span><i class="fa-solid fa-magnifying-glass"></i> Búsqueda rápida</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">Explora por categoría</span>
+          <h2 class="section-title">¿Qué necesitas <span class="highlight">hoy?</span></h2>
+          <p class="section-sub">Elige un rubro y salta directo al inventario FerreMAx.</p>
+        </div>
+        <div class="cat-accordion" id="catAccordion">
+          <button class="cat-col" type="button" data-cat="herramientas" style="--acc:#FF6B00">
+            <span class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&q=70')"></span>
+            <span class="cat-veil"></span>
+            <span class="cat-body">
+              <span class="cat-icon"><i class="fa-solid fa-hammer"></i></span>
+              <span class="cat-name">Herramientas</span>
+              <span class="cat-text">Taladros, sierras, llaves y más para cualquier trabajo.</span>
+              <span class="cat-link">Ver herramientas <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </button>
+          <button class="cat-col" type="button" data-cat="pinturas" style="--acc:#7C3AED">
+            <span class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=70')"></span>
+            <span class="cat-veil"></span>
+            <span class="cat-body">
+              <span class="cat-icon"><i class="fa-solid fa-paint-roller"></i></span>
+              <span class="cat-name">Pinturas</span>
+              <span class="cat-text">Látex, esmaltes y acabados para renovar tus espacios.</span>
+              <span class="cat-link">Ver pinturas <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </button>
+          <button class="cat-col" type="button" data-cat="plomeria" style="--acc:#0EA5E9">
+            <span class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=70')"></span>
+            <span class="cat-veil"></span>
+            <span class="cat-body">
+              <span class="cat-icon"><i class="fa-solid fa-faucet-drip"></i></span>
+              <span class="cat-name">Plomería</span>
+              <span class="cat-text">Tuberías, válvulas y accesorios para instalaciones perfectas.</span>
+              <span class="cat-link">Ver plomería <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </button>
+          <button class="cat-col" type="button" data-cat="electricidad" style="--acc:#EAB308">
+            <span class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=900&q=70')"></span>
+            <span class="cat-veil"></span>
+            <span class="cat-body">
+              <span class="cat-icon"><i class="fa-solid fa-bolt"></i></span>
+              <span class="cat-name">Electricidad</span>
+              <span class="cat-text">Cables, interruptores e iluminación LED de alto rendimiento.</span>
+              <span class="cat-link">Ver electricidad <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </button>
+          <button class="cat-col" type="button" data-cat="seguridad" style="--acc:#10B981">
+            <span class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=900&q=70')"></span>
+            <span class="cat-veil"></span>
+            <span class="cat-body">
+              <span class="cat-icon"><i class="fa-solid fa-lock"></i></span>
+              <span class="cat-name">Seguridad</span>
+              <span class="cat-text">Candados, cerraduras y accesorios para proteger lo tuyo.</span>
+              <span class="cat-link">Ver seguridad <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="productos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">Nuestro catálogo</span>
+          <h2 class="section-title">Productos <span class="highlight">FerreMAx</span></h2>
+          <p class="section-sub">Explora el inventario completo con precio, disponibilidad y ficha técnica.</p>
+        </div>
+
+        <div class="catalog-tools reveal">
+          <div class="cat-tabs" id="catTabs" aria-label="Filtros rápidos por categoría"></div>
+          <div class="catalog-tools-right">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <input type="search" id="searchInput" placeholder="Buscar producto o SKU..." aria-label="Buscar productos" autocomplete="off">
+              <kbd>/</kbd>
+            </div>
+            <button class="tool-btn" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel"><i class="fa-solid fa-sliders" aria-hidden="true"></i> Filtros</button>
+            <label class="sort-field">
+              <select id="sortSelect" aria-label="Ordenar productos">
+                <option value="featured">Destacados</option>
+                <option value="name">Nombre A-Z</option>
+                <option value="price-asc">Precio: menor a mayor</option>
+                <option value="price-desc">Precio: mayor a menor</option>
+                <option value="stock">Mayor stock</option>
+              </select>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </label>
+            <div class="view-toggle" role="group" aria-label="Cambiar vista">
+              <button id="gridView" type="button" class="is-active" aria-pressed="true" aria-label="Vista de estante"><i class="fa-solid fa-grip" aria-hidden="true"></i></button>
+              <button id="listView" type="button" aria-pressed="false" aria-label="Vista de lista"><i class="fa-solid fa-list" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="active-filters" id="activeFilters" aria-live="polite"></div>
+        <p class="result-count" id="resultCount" role="status" aria-live="polite">Cargando productos…</p>
+
+        <div class="catalog-rail">
+          <button class="rail-arrow prev" id="railPrev" type="button" aria-label="Producto anterior"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="pcard-rail" id="productGrid" tabindex="0"></div>
+          <button class="rail-arrow next" id="railNext" type="button" aria-label="Producto siguiente"><i class="fa-solid fa-arrow-right"></i></button>
+          <p class="rail-count" id="railCount"></p>
+        </div>
+        <div class="no-results" id="noResults">
+          <h3>Sin coincidencias</h3>
+          <p>Prueba con otra palabra o ajusta los filtros activos.</p>
+          <button class="btn btn-primary btn-ripple" id="emptyReset" type="button">Ver todos los productos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImZtTmF2eSIgeDE9IjgiIHkxPSI2IiB4Mj0iNTYiIHkyPSI1OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiMxMjNCNjMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwNzFBMzMiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmbU9yYW5nZSIgeDE9IjE0IiB5MT0iMTQiIHgyPSI1MCIgeTI9IjUwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iI0ZGOEEyQiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0U4NUQwMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik0zMiAzIDU3IDE3LjV2MjlMMzIgNjEgNyA0Ni41di0yOUwzMiAzWiIgZmlsbD0idXJsKCNmbU5hdnkpIiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxwYXRoIGQ9Im0yMCAyNCA2IDE2IDYtMTIgNiAxMiA2LTE2IiBzdHJva2U9InVybCgjZm1PcmFuZ2UpIiBzdHJva2Utd2lkdGg9IjUuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wOCIvPgo8L3N2Zz4K" alt="" class="brand-logo">
+          <span class="brand-text">FERRE<em>MAX</em></span>
+        </a>
+        <p>Catálogo técnico industrial con precios, stock y fichas de producto. Datos editables en el bloque <code>FERREMAX_DATA</code> de este archivo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categorías</h4>
+        <a href="#productos" data-footer-cat="herramientas">Herramientas</a>
+        <a href="#productos" data-footer-cat="pinturas">Pinturas</a>
+        <a href="#productos" data-footer-cat="plomeria">Plomería</a>
+        <a href="#productos" data-footer-cat="electricidad">Electricidad</a>
+        <a href="#productos" data-footer-cat="seguridad">Seguridad</a>
+      </div>
+      <div class="footer-col">
+        <h4>Catálogo</h4>
+        <p id="footerCount">31 productos</p>
+        <p id="footerCatCount">5 categorías</p>
+      </div>
+      <div class="footer-col">
+        <h4>Ubicación</h4>
+        <p id="footerAddress"><i class="fa-solid fa-location-dot"></i> Av. Principal #1234, zona Central</p>
+        <p><i class="fa-solid fa-phone"></i> <a id="footerPhone" href="tel:+59170000000">+591 700 000 00</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>FerreMAx · Catálogo de demostración</span>
+      <span>Datos y precios de ejemplo</span>
+    </div>
+  </footer>
+
+  <div class="filter-backdrop" id="filterBackdrop" hidden></div>
+  <aside class="filter-panel" id="filterPanel" aria-label="Filtros del catálogo" aria-hidden="true">
+    <div class="panel-head">
+      <div><span class="section-eyebrow">Ajustar</span><h2>Filtros</h2></div>
+      <button class="panel-close" id="filterClose" type="button" aria-label="Cerrar filtros"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="panel-group">
+      <h3>Categoría</h3>
+      <div class="check-list" id="categoryChecks"></div>
+    </div>
+    <div class="panel-group">
+      <h3>Disponibilidad</h3>
+      <div class="check-list">
+        <label class="check-row"><input type="radio" name="stock" value="all" checked><span class="check-mark"></span><span>Todos</span></label>
+        <label class="check-row"><input type="radio" name="stock" value="available"><span class="check-mark"></span><span>Con stock</span></label>
+        <label class="check-row"><input type="radio" name="stock" value="low"><span class="check-mark"></span><span>Últimas unidades</span></label>
+        <label class="check-row"><input type="radio" name="stock" value="out"><span class="check-mark"></span><span>Agotados</span></label>
+      </div>
+    </div>
+    <div class="panel-group">
+      <h3>Precio máximo</h3>
+      <output class="price-output" id="priceOutput" for="priceRange">Bs. 1.200</output>
+      <input class="range-input" type="range" id="priceRange" min="0" max="1200" step="10" value="1200" aria-label="Precio máximo">
+      <div class="range-ends"><span>Bs. 0</span><span id="priceMaxLabel">Bs. 1.200</span></div>
+    </div>
+    <button class="btn btn-primary btn-block btn-ripple" id="resetFilters" type="button">Limpiar filtros</button>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="product-drawer" id="productDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-inner" id="drawerContent"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-top" id="backTop" type="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <noscript>
+    <div class="noscript">Este catálogo necesita JavaScript para filtrar y mostrar las fichas de producto.</div>
+  </noscript>
+
+  <script>
+window.FERREMAX_DATA = {
+  store: {
+    name: "FerreMAx",
+    category: "Catálogo técnico industrial",
+    currency: "Bs.",
+    phone: "59170000000",
+    phoneDisplay: "+591 700 000 00",
+    address: "Av. Principal #1234, zona Central",
+    updated: "Noviembre 2026"
+  },
+  categories: [
+    { id: "herramientas", name: "Herramientas", icon: "i-hammer", accent: "#FF8A2B" },
+    { id: "pinturas", name: "Pinturas", icon: "i-paint", accent: "#B69BFF" },
+    { id: "plomeria", name: "Plomería", icon: "i-drop", accent: "#55C8F2" },
+    { id: "electricidad", name: "Electricidad", icon: "i-bolt", accent: "#FFC85C" },
+    { id: "seguridad", name: "Seguridad", icon: "i-shield", accent: "#5FD6A6" }
+  ],
+  products: [
+    { id: 1, sku: "FMX-HER-001", name: "Taladro percutor 13 mm", cat: "herramientas", price: 850, oldPrice: 950, badge: "Más vendido", featured: true, stock: 12, desc: "850 W · 3 velocidades · mandril metálico", specs: ["Potencia: 850 W", "Velocidades: 3", "Mandril: 13 mm metálico", "Uso: obra y taller"] },
+    { id: 2, sku: "FMX-HER-002", name: "Set de destornilladores 12 pzas", cat: "herramientas", price: 180, stock: 25, desc: "Puntas de acero cromo-vanadio", specs: ["Piezas: 12", "Acero: cromo-vanadio", "Mango: antideslizante", "Estuche: incluido"] },
+    { id: 3, sku: "FMX-HER-003", name: "Martillo de carpintero", cat: "herramientas", price: 75, stock: 40, desc: "Mango de fibra ergonómico", specs: ["Peso: 500 g", "Mango: fibra de vidrio", "Cabeza: acero forjado", "Uso: carpintería general"] },
+    { id: 4, sku: "FMX-HER-004", name: "Sierra circular 1400 W", cat: "herramientas", price: 1150, stock: 4, desc: "Corte 66 mm · disco 7 1/4\"", specs: ["Potencia: 1400 W", "Profundidad de corte: 66 mm", "Disco: 7 1/4\"", "Incluye: guía paralela"] },
+    { id: 5, sku: "FMX-HER-005", name: "Caja de herramientas 24\"", cat: "herramientas", price: 320, oldPrice: 380, badge: "Oferta", featured: true, stock: 8, desc: "Metal resistente · 3 bandejas", specs: ["Medida: 24\"", "Bandejas: 3", "Material: acero", "Cierre: broche metálico"] },
+    { id: 6, sku: "FMX-HER-006", name: "Llave ajustable 10\"", cat: "herramientas", price: 120, stock: 18, desc: "Mandíbula endurecida", specs: ["Medida: 10\"", "Apertura: 30 mm", "Mandíbula: acero templado", "Mango: grip antideslizante"] },
+    { id: 7, sku: "FMX-PIN-001", name: "Pintura látex blanca 4 L", cat: "pinturas", price: 145, oldPrice: 170, badge: "Oferta", stock: 22, desc: "Lavable · rendimiento 38 m²", specs: ["Contenido: 4 L", "Rendimiento: 38 m²", "Acabado: mate lavable", "Secado: 1 a 2 h"] },
+    { id: 8, sku: "FMX-PIN-002", name: "Esmalte sintético rojo 1 L", cat: "pinturas", price: 65, stock: 30, desc: "Acabado brillante", specs: ["Contenido: 1 L", "Acabado: brillante", "Uso: metal y madera", "Secado: 6 a 8 h"] },
+    { id: 9, sku: "FMX-PIN-003", name: "Set de brochas y rodillos", cat: "pinturas", price: 55, stock: 15, desc: "8 piezas para todo acabado", specs: ["Piezas: 8", "Incluye: brochas y rodillos", "Cerdas: sintéticas", "Uso: interiores y exteriores"] },
+    { id: 10, sku: "FMX-PIN-004", name: "Thinner universal 1 L", cat: "pinturas", price: 28, stock: 50, desc: "Para limpieza y dilución", specs: ["Contenido: 1 L", "Uso: dilución y limpieza", "Compatibilidad: esmaltes y barnices", "Presentación: envase metálico"] },
+    { id: 11, sku: "FMX-PIN-005", name: "Masilla lista 1 kg", cat: "pinturas", price: 22, stock: 0, desc: "Para resanar superficies", specs: ["Contenido: 1 kg", "Uso: resanado interior", "Aplicación: espátula", "Secado: 30 a 45 min"] },
+    { id: 12, sku: "FMX-PIN-006", name: "Imprimante anticorrosivo", cat: "pinturas", price: 58, stock: 14, desc: "Protección para metales", specs: ["Contenido: 1 L", "Uso: metales ferrosos", "Acabado: mate", "Protección: anticorrosiva"] },
+    { id: 13, sku: "FMX-PLM-001", name: "Tubería PVC 1\" x 3 m", cat: "plomeria", price: 35, stock: 35, desc: "Presión · conexión soldable", specs: ["Diámetro: 1\"", "Largo: 3 m", "Tipo: presión", "Unión: soldable con pegamento"] },
+    { id: 14, sku: "FMX-PLM-002", name: "Llave de paso 1/2\"", cat: "plomeria", price: 45, stock: 20, desc: "Cuerpo de bronce", specs: ["Medida: 1/2\"", "Material: bronce", "Tipo: paso directo", "Uso: agua fría y caliente"] },
+    { id: 15, sku: "FMX-PLM-003", name: "Cinta teflón x3", cat: "plomeria", price: 12, stock: 60, desc: "Sellado hermético de roscas", specs: ["Presentación: 3 rollos", "Material: PTFE", "Uso: roscas de agua y gas", "Ancho: 12 mm"] },
+    { id: 16, sku: "FMX-PLM-004", name: "Sifón lavadero universal", cat: "plomeria", price: 38, stock: 9, desc: "Acero inoxidable · trampa de grasa", specs: ["Material: acero inoxidable", "Diámetro: 40 mm", "Incluye: trampa de grasa", "Uso: lavadero"] },
+    { id: 17, sku: "FMX-PLM-005", name: "Pegamento PVC 125 ml", cat: "plomeria", price: 15, stock: 45, desc: "Sellado y unión de tuberías", specs: ["Contenido: 125 ml", "Uso: unión PVC", "Secado: 10 min", "Presentación: frasco con aplicador"] },
+    { id: 18, sku: "FMX-PLM-006", name: "Válvula de globo 3/4\"", cat: "plomeria", price: 52, stock: 11, desc: "Control de paso con volante", specs: ["Medida: 3/4\"", "Tipo: globo", "Material: bronce", "Control: volante manual"] },
+    { id: 19, sku: "FMX-ELE-001", name: "Cable eléctrico #14 x 100 m", cat: "electricidad", price: 240, stock: 16, desc: "Cobre · N2XOH", specs: ["Calibre: #14 AWG", "Largo: 100 m", "Conductor: cobre", "Norma: N2XOH"] },
+    { id: 20, sku: "FMX-ELE-002", name: "Interruptor simple 220 V", cat: "electricidad", price: 18, stock: 34, desc: "Blanco · empotrado", specs: ["Tensión: 220 V", "Tipo: simple", "Color: blanco", "Instalación: empotrada"] },
+    { id: 21, sku: "FMX-ELE-003", name: "Tomacorriente doble", cat: "electricidad", price: 22, stock: 28, desc: "Con puesta a tierra", specs: ["Tipo: doble", "Puesta a tierra: sí", "Color: blanco", "Instalación: empotrada"] },
+    { id: 22, sku: "FMX-ELE-004", name: "Cinta aislante x3", cat: "electricidad", price: 10, stock: 70, desc: "Alta adhesión 18 mm", specs: ["Presentación: 3 rollos", "Ancho: 18 mm", "Color: negro", "Uso: aislamiento eléctrico"] },
+    { id: 23, sku: "FMX-ELE-005", name: "Foco LED 12 W", cat: "electricidad", price: 25, oldPrice: 32, badge: "Nuevo", featured: true, stock: 2, desc: "Luz fría · 1.100 lúmenes", specs: ["Potencia: 12 W", "Flujo: 1.100 lm", "Temperatura: 6500 K", "Casquillo: E27"] },
+    { id: 24, sku: "FMX-ELE-006", name: "Tablero 6 puntos", cat: "electricidad", price: 95, stock: 6, desc: "Con llave termomagnética", specs: ["Puntos: 6", "Protección: termomagnética", "Material: ABS", "Instalación: superficial"] },
+    { id: 25, sku: "FMX-SEG-001", name: "Candado de acero 60 mm", cat: "seguridad", price: 48, stock: 3, desc: "Cuerpo de acero templado", specs: ["Medida: 60 mm", "Cuerpo: acero templado", "Llaves: 3 incluidas", "Uso: exterior"] },
+    { id: 26, sku: "FMX-SEG-002", name: "Caja fuerte digital", cat: "seguridad", price: 680, stock: 2, desc: "Digital · fija y portátil", specs: ["Apertura: teclado digital", "Fijación: pernos y asa", "Material: acero", "Incluye: llave de emergencia"] },
+    { id: 27, sku: "FMX-SEG-003", name: "Cerradura de sobreponer", cat: "seguridad", price: 75, stock: 10, desc: "Con llaves y seguro interior", specs: ["Tipo: sobreponer", "Llaves: 4", "Seguro interior: sí", "Color: latón"] },
+    { id: 28, sku: "FMX-SEG-004", name: "Tornillos surtidos 500 pzas", cat: "seguridad", price: 35, stock: 40, desc: "Punzonados galvanizados", specs: ["Cantidad: 500 piezas", "Acabado: galvanizado", "Surtido: 6 medidas", "Uso: madera y metal"] },
+    { id: 29, sku: "FMX-SEG-005", name: "Guantes de trabajo x3", cat: "seguridad", price: 42, stock: 19, desc: "Nitrilo · talle L", specs: ["Presentación: 3 pares", "Material: nitrilo", "Talle: L", "Uso: manejo general"] },
+    { id: 30, sku: "FMX-SEG-006", name: "Cinta métrica 5 m", cat: "seguridad", price: 25, stock: 33, desc: "Caja ABS · freno de pulgar", specs: ["Largo: 5 m", "Ancho: 19 mm", "Caja: ABS", "Freno: pulgar"] },
+    { id: 31, sku: "FMX-SEG-007", name: "Nivel láser de línea", cat: "seguridad", price: 380, badge: "Premium", featured: true, stock: 5, desc: "Auto-nivel 360° · incluye trípode", specs: ["Cobertura: 360°", "Nivelación: automática", "Alcance: 12 m", "Incluye: trípode"] }
+  ]
+};
+
+(function () {
+  'use strict';
+
+  const DATA = window.FERREMAX_DATA;
+  if (!DATA) return;
+
+  const qs = (selector, context) => (context || document).querySelector(selector);
+  const qsa = (selector, context) => Array.from((context || document).querySelectorAll(selector));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const products = DATA.products;
+  const categories = DATA.categories;
+  const categoryById = categories.reduce((map, cat) => { map[cat.id] = cat; return map; }, {});
+  const maxPrice = Math.ceil(Math.max.apply(null, products.map((p) => p.price)) / 100) * 100;
+
+  const CAT_STYLE = {
+    herramientas: { icon: 'fa-hammer', emoji: '🔨', g1: '#FFF3E6', g2: '#FFD9B3', tag: '#FF6B00' },
+    pinturas: { icon: 'fa-paint-roller', emoji: '🎨', g1: '#F3EEFF', g2: '#DCCDFF', tag: '#7C3AED' },
+    plomeria: { icon: 'fa-faucet-drip', emoji: '🚰', g1: '#E6F7FF', g2: '#B8E8FA', tag: '#0284C7' },
+    electricidad: { icon: 'fa-bolt', emoji: '🔌', g1: '#FFFBEB', g2: '#FCE9A8', tag: '#D97706' },
+    seguridad: { icon: 'fa-lock', emoji: '🔒', g1: '#E7F9F0', g2: '#BBF0D8', tag: '#059669' }
+  };
+
+  const EMOJI = {
+    1: '🔨', 2: '🪛', 3: '🔨', 4: '🪚', 5: '🧰', 6: '🔧',
+    7: '🪣', 8: '🎨', 9: '🖌️', 10: '🧴', 11: '🥫', 12: '🛡️',
+    13: '🚰', 14: '🔩', 15: '🌀', 16: '🥣', 17: '🧪', 18: '⚙️',
+    19: '🔌', 20: '💡', 21: '🔋', 22: '🎀', 23: '💡', 24: '🗄️',
+    25: '🔒', 26: '🔐', 27: '🗝️', 28: '🔩', 29: '🧤', 30: '📏', 31: '📐'
+  };
+
+  const state = {
+    q: '',
+    categories: new Set(),
+    stock: 'all',
+    maxPrice: maxPrice,
+    sort: 'featured',
+    view: 'rail'
+  };
+
+  const elements = {
+    preloader: qs('#preloader'),
+    preloaderFill: qs('#preloaderFill'),
+    navbar: qs('#navbar'),
+    progress: qs('#scrollProgress'),
+    backTop: qs('#backTop'),
+    menuToggle: qs('#menuToggle'),
+    mobileMenu: qs('#mobileMenu'),
+    menuBackdrop: qs('#menuBackdrop'),
+    menuClose: qs('#menuClose'),
+    heroPrev: qs('#heroPrev'),
+    heroNext: qs('#heroNext'),
+    heroDots: qs('#heroDots'),
+    tickerTrack: qs('#tickerTrack'),
+    catAccordion: qs('#catAccordion'),
+    catTabs: qs('#catTabs'),
+    search: qs('#searchInput'),
+    filterToggle: qs('#filterToggle'),
+    filterPanel: qs('#filterPanel'),
+    filterBackdrop: qs('#filterBackdrop'),
+    filterClose: qs('#filterClose'),
+    categoryChecks: qs('#categoryChecks'),
+    priceRange: qs('#priceRange'),
+    priceOutput: qs('#priceOutput'),
+    priceMaxLabel: qs('#priceMaxLabel'),
+    resetFilters: qs('#resetFilters'),
+    sort: qs('#sortSelect'),
+    gridView: qs('#gridView'),
+    listView: qs('#listView'),
+    activeFilters: qs('#activeFilters'),
+    resultCount: qs('#resultCount'),
+    grid: qs('#productGrid'),
+    railPrev: qs('#railPrev'),
+    railNext: qs('#railNext'),
+    railCount: qs('#railCount'),
+    noResults: qs('#noResults'),
+    emptyReset: qs('#emptyReset'),
+    drawerBackdrop: qs('#drawerBackdrop'),
+    productDrawer: qs('#productDrawer'),
+    drawerContent: qs('#drawerContent'),
+    toast: qs('#toast'),
+    footerAddress: qs('#footerAddress'),
+    footerAddressMobile: qs('#footerAddressMobile'),
+    footerPhone: qs('#footerPhone'),
+    footerCount: qs('#footerCount'),
+    footerCatCount: qs('#footerCatCount')
+  };
+
+  let heroIdx = 0;
+  let heroTimer = null;
+  let toastTimer = null;
+  let lastTrigger = null;
+  let revealObserver = null;
+  let watchdogSet = false;
+
+  function safe(label, fn) {
+    try { fn(); } catch (error) { console.warn('FerreMAx [' + label + ']', error); }
+  }
+
+  function escapeHTML(value) {
+    const entities = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    return String(value).replace(/[&<>"']/g, (char) => entities[char]);
+  }
+
+  function normalize(value) {
+    return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  function formatNumber(value) {
+    return Number(value).toLocaleString('es-BO', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
+  function formatPrice(value) {
+    return DATA.store.currency + ' ' + formatNumber(value);
+  }
+
+  function categoryName(id) {
+    return (categoryById[id] || { name: 'General' }).name;
+  }
+
+  function catMeta(id) {
+    return CAT_STYLE[id] || { icon: 'fa-box', emoji: '📦', g1: '#F5F6F8', g2: '#E7E9ED', tag: '#FF6B00' };
+  }
+
+  function stockInfo(stock) {
+    const value = Number(stock) || 0;
+    if (value <= 0) return { key: 'out', label: 'Agotado' };
+    if (value <= 3) return { key: 'low', label: 'Últimas ' + value };
+    if (value <= 8) return { key: 'mid', label: 'Quedan ' + value };
+    return { key: 'ok', label: value + ' disponibles' };
+  }
+
+  function badgeClass(badge) {
+    if (!badge) return '';
+    if (badge.indexOf('Más') !== -1) return 'b-hot';
+    if (badge.indexOf('Oferta') !== -1) return 'b-offer';
+    if (badge.indexOf('Nuevo') !== -1) return 'b-new';
+    return 'b-premium';
+  }
+
+  function cardHTML(product, index) {
+    const cat = catMeta(product.cat);
+    const stock = stockInfo(product.stock);
+    const oldPrice = product.oldPrice ? '<small>' + formatPrice(product.oldPrice) + '</small>' : '';
+    const badge = product.badge
+      ? '<span class="pcard-badge ' + badgeClass(product.badge) + '">' + escapeHTML(product.badge) + '</span>'
+      : '';
+    return '<div class="pcard-wrap">' +
+      '<article class="pcard" data-id="' + product.id + '" style="--media-1:' + cat.g1 + ';--media-2:' + cat.g2 + ';--pcard-cat:' + cat.tag + ';--mx:50%;--my:50%">' +
+        '<span class="pcard-shine"></span>' +
+        '<div class="pcard-media">' +
+          badge +
+          '<span class="pcard-emoji">' + (EMOJI[product.id] || cat.emoji) + '</span>' +
+          '<span class="pcard-cat"><i class="fa-solid ' + cat.icon + '"></i> ' + escapeHTML(categoryName(product.cat)) + '</span>' +
+        '</div>' +
+        '<div class="pcard-body">' +
+          '<span class="pcard-sku">' + escapeHTML(product.sku) + '</span>' +
+          '<h3 class="pcard-name">' + escapeHTML(product.name) + '</h3>' +
+          '<p class="pcard-desc">' + escapeHTML(product.desc) + '</p>' +
+          '<div class="pcard-foot">' +
+            '<div class="pcard-prices">' +
+              '<span class="pcard-price">' + oldPrice + formatPrice(product.price) + '</span>' +
+              '<span class="pcard-stock st-' + stock.key + '">' + escapeHTML(stock.label) + '</span>' +
+            '</div>' +
+            '<button class="info-btn" type="button" data-open="' + product.id + '" aria-label="Ver ficha de ' + escapeHTML(product.name) + '"><i class="fa-solid fa-arrow-right"></i></button>' +
+          '</div>' +
+        '</div>' +
+      '</article>' +
+    '</div>';
+  }
+
+  function drawerHTML(product) {
+    const cat = catMeta(product.cat);
+    const stock = stockInfo(product.stock);
+    const oldPrice = product.oldPrice ? '<small>' + formatPrice(product.oldPrice) + '</small>' : '';
+    const specs = product.specs.map((spec) => '<li><i class="fa-solid fa-check" aria-hidden="true"></i>' + escapeHTML(spec) + '</li>').join('');
+    return '<div class="drawer-top">' +
+        '<div><span class="section-eyebrow">Ficha técnica</span><strong>' + escapeHTML(product.sku) + '</strong></div>' +
+        '<button class="drawer-close" id="drawerClose" type="button" data-close-drawer aria-label="Cerrar ficha"><i class="fa-solid fa-xmark"></i></button>' +
+      '</div>' +
+      '<div class="drawer-art-wrap" style="--media-1:' + cat.g1 + ';--media-2:' + cat.g2 + '">' +
+        '<span class="drawer-emoji">' + (EMOJI[product.id] || cat.emoji) + '</span>' +
+      '</div>' +
+      '<div class="drawer-head">' +
+        '<span class="cat-label">' + escapeHTML(categoryName(product.cat)) + '</span>' +
+        '<h2 id="drawerTitle">' + escapeHTML(product.name) + '</h2>' +
+        '<p>' + escapeHTML(product.desc) + '</p>' +
+      '</div>' +
+      '<div class="drawer-price">' + oldPrice + '<strong>' + formatPrice(product.price) + '</strong><span class="drawer-stock st-' + stock.key + '">' + escapeHTML(stock.label) + '</span></div>' +
+      '<div class="drawer-section"><h3>Especificaciones</h3><ul class="spec-list">' + specs + '</ul></div>' +
+      '<div class="drawer-actions">' +
+        '<button class="btn btn-primary btn-ripple" type="button" data-copy="' + escapeHTML(product.sku) + '"><i class="fa-solid fa-copy"></i> Copiar SKU</button>' +
+        '<button class="btn btn-outline btn-ripple" type="button" data-close-drawer>Cerrar ficha</button>' +
+      '</div>';
+  }
+
+  function getFilteredProducts() {
+    const term = normalize(state.q.trim());
+    const list = products.filter((product) => {
+      const searchable = normalize([product.name, product.sku, product.desc, categoryName(product.cat), product.specs.join(' ')].join(' '));
+      if (term && searchable.indexOf(term) === -1) return false;
+      if (state.categories.size && !state.categories.has(product.cat)) return false;
+      if (product.price > state.maxPrice) return false;
+      if (state.stock === 'available' && product.stock <= 0) return false;
+      if (state.stock === 'low' && (product.stock <= 0 || product.stock > 3)) return false;
+      if (state.stock === 'out' && product.stock > 0) return false;
+      return true;
+    });
+
+    if (state.sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name, 'es'));
+    if (state.sort === 'price-asc') list.sort((a, b) => a.price - b.price);
+    if (state.sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+    if (state.sort === 'stock') list.sort((a, b) => b.stock - a.stock || a.id - b.id);
+    if (state.sort === 'featured') list.sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || a.id - b.id);
+    return list;
+  }
+
+  function activeFiltersHTML() {
+    const tags = [];
+    if (state.q.trim()) tags.push({ type: 'q', value: '', label: '"' + state.q.trim() + '"' });
+    state.categories.forEach((id) => tags.push({ type: 'category', value: id, label: categoryName(id) }));
+    if (state.stock !== 'all') {
+      const labels = { available: 'Con stock', low: 'Últimas unidades', out: 'Agotados' };
+      tags.push({ type: 'stock', value: state.stock, label: labels[state.stock] });
+    }
+    if (state.maxPrice < maxPrice) tags.push({ type: 'price', value: '', label: 'Hasta ' + formatPrice(state.maxPrice) });
+    if (!tags.length) return '';
+    return tags.map((tag) => '<span class="active-filter">' + escapeHTML(tag.label) +
+      '<button type="button" data-clear-type="' + tag.type + '" data-clear-value="' + escapeHTML(tag.value) + '" aria-label="Quitar filtro ' + escapeHTML(tag.label) + '"><i class="fa-solid fa-xmark"></i></button></span>').join('');
+  }
+
+  function syncControls() {
+    qsa('.cat-tab', elements.catTabs).forEach((tab) => {
+      const active = tab.dataset.category === 'all' ? state.categories.size === 0 : state.categories.has(tab.dataset.category);
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-pressed', String(active));
+    });
+    qsa('input[type="checkbox"]', elements.categoryChecks).forEach((input) => { input.checked = state.categories.has(input.value); });
+    qsa('input[name="stock"]').forEach((input) => { input.checked = input.value === state.stock; });
+    elements.priceRange.value = String(state.maxPrice);
+    elements.priceOutput.textContent = formatPrice(state.maxPrice);
+    elements.sort.value = state.sort;
+    elements.gridView.classList.toggle('is-active', state.view === 'grid');
+    elements.listView.classList.toggle('is-active', state.view === 'list');
+    elements.gridView.setAttribute('aria-pressed', String(state.view === 'grid'));
+    elements.listView.setAttribute('aria-pressed', String(state.view === 'list'));
+    elements.grid.classList.toggle('is-grid', state.view === 'grid');
+    elements.grid.classList.toggle('is-list', state.view === 'list');
+    elements.railPrev.hidden = state.view !== 'rail';
+    elements.railNext.hidden = state.view !== 'rail';
+    elements.activeFilters.innerHTML = activeFiltersHTML();
+  }
+
+  function initReveal() {
+    if (revealObserver) revealObserver.disconnect();
+    const items = qsa('.reveal:not(.is-in)');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      items.forEach((item) => item.classList.add('is-in'));
+      return;
+    }
+    revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    items.forEach((item) => revealObserver.observe(item));
+    if (!watchdogSet) {
+      watchdogSet = true;
+      window.setTimeout(() => qsa('.reveal:not(.is-in)').forEach((item) => item.classList.add('is-in')), 2500);
+    }
+  }
+
+  function initTilt() {
+    if (!finePointer || reduceMotion) return;
+    qsa('.pcard', elements.grid).forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const px = (event.clientX - rect.left) / rect.width;
+        const py = (event.clientY - rect.top) / rect.height;
+        card.style.transform = 'rotateX(' + ((0.5 - py) * 8).toFixed(2) + 'deg) rotateY(' + ((px - 0.5) * 10).toFixed(2) + 'deg) translateY(-4px)';
+      });
+      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+    });
+  }
+
+  function bindCardSpotlight() {
+    if (!finePointer || reduceMotion) return;
+    qsa('.pcard', elements.grid).forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (((event.clientX - rect.left) / rect.width) * 100).toFixed(1) + '%');
+        card.style.setProperty('--my', (((event.clientY - rect.top) / rect.height) * 100).toFixed(1) + '%');
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+  }
+
+  function updateRailArrows() {
+    if (state.view !== 'rail') return;
+    const max = elements.grid.scrollWidth - elements.grid.clientWidth - 2;
+    elements.railPrev.disabled = elements.grid.scrollLeft <= 2;
+    elements.railNext.disabled = elements.grid.scrollLeft >= max;
+  }
+
+  function render() {
+    const list = getFilteredProducts();
+    elements.grid.innerHTML = list.map(cardHTML).join('');
+    elements.grid.classList.remove('dealt');
+    void elements.grid.offsetWidth;
+    elements.grid.classList.add('dealt');
+    qsa('.pcard-wrap', elements.grid).forEach((wrap, index) => {
+      wrap.style.setProperty('--deal-rot', (((Math.random() - 0.5) * 2.4).toFixed(2)) + 'deg');
+      wrap.style.setProperty('--deal-delay', (index % 12) * 0.06 + 's');
+    });
+    elements.noResults.classList.toggle('show', list.length === 0);
+    elements.resultCount.textContent = 'Mostrando ' + list.length + ' de ' + products.length + ' productos · precio y stock visibles';
+    elements.railCount.textContent = list.length === 1 ? '1 producto' : list.length + ' productos';
+    syncControls();
+    initTilt();
+    bindCardSpotlight();
+    updateRailArrows();
+  }
+
+  function resetAll() {
+    state.q = '';
+    state.categories.clear();
+    state.stock = 'all';
+    state.maxPrice = maxPrice;
+    state.sort = 'featured';
+    elements.search.value = '';
+    elements.priceRange.value = String(maxPrice);
+    render();
+  }
+
+  function selectCategory(id) {
+    if (id === 'all') state.categories.clear();
+    else state.categories = new Set([id]);
+    qsa('.cat-col', elements.catAccordion).forEach((col) => col.classList.toggle('active', col.dataset.cat === id));
+    render();
+  }
+
+  function initFilters() {
+    elements.catTabs.innerHTML = '<button class="cat-tab" type="button" data-category="all" aria-pressed="false">Todos <small>' + products.length + '</small></button>' +
+      categories.map((cat) => {
+        const count = products.filter((product) => product.cat === cat.id).length;
+        return '<button class="cat-tab" type="button" data-category="' + cat.id + '" aria-pressed="false"><i class="fa-solid ' + catMeta(cat.id).icon + '"></i> ' + escapeHTML(cat.name) + ' <small>' + count + '</small></button>';
+      }).join('');
+
+    elements.categoryChecks.innerHTML = categories.map((cat) =>
+      '<label class="check-row"><input type="checkbox" value="' + cat.id + '"><span class="check-mark"></span><span>' + escapeHTML(cat.name) + '</span></label>'
+    ).join('');
+
+    elements.priceRange.min = '0';
+    elements.priceRange.max = String(maxPrice);
+    elements.priceRange.value = String(maxPrice);
+    elements.priceOutput.textContent = formatPrice(maxPrice);
+    elements.priceMaxLabel.textContent = formatPrice(maxPrice);
+
+    let searchTimer = null;
+    elements.search.addEventListener('input', () => {
+      window.clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(() => { state.q = elements.search.value; render(); }, 100);
+    });
+
+    elements.catTabs.addEventListener('click', (event) => {
+      const tab = event.target.closest('.cat-tab');
+      if (!tab) return;
+      selectCategory(tab.dataset.category);
+    });
+
+    elements.categoryChecks.addEventListener('change', (event) => {
+      const input = event.target;
+      if (input.type !== 'checkbox') return;
+      if (input.checked) state.categories.add(input.value);
+      else state.categories.delete(input.value);
+      qsa('.cat-col', elements.catAccordion).forEach((col) => col.classList.toggle('active', state.categories.has(col.dataset.cat)));
+      render();
+    });
+
+    qsa('input[name="stock"]').forEach((input) => input.addEventListener('change', () => {
+      if (input.checked) { state.stock = input.value; render(); }
+    }));
+
+    elements.priceRange.addEventListener('input', () => { state.maxPrice = Number(elements.priceRange.value); render(); });
+    elements.sort.addEventListener('change', () => { state.sort = elements.sort.value; render(); });
+    elements.gridView.addEventListener('click', () => { state.view = 'grid'; render(); });
+    elements.listView.addEventListener('click', () => { state.view = 'list'; render(); });
+    elements.resetFilters.addEventListener('click', resetAll);
+    elements.emptyReset.addEventListener('click', resetAll);
+
+    elements.activeFilters.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-clear-type]');
+      if (!button) return;
+      const type = button.dataset.clearType;
+      if (type === 'q') { state.q = ''; elements.search.value = ''; }
+      if (type === 'category') state.categories.delete(button.dataset.clearValue);
+      if (type === 'stock') state.stock = 'all';
+      if (type === 'price') state.maxPrice = maxPrice;
+      render();
+    });
+
+    qsa('[data-footer-cat]').forEach((link) => link.addEventListener('click', () => selectCategory(link.dataset.footerCat)));
+  }
+
+  function initCatAccordion() {
+    qsa('.cat-col', elements.catAccordion).forEach((col) => col.addEventListener('click', () => {
+      selectCategory(col.dataset.cat);
+      const target = qs('#productos');
+      if (target) target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    }));
+  }
+
+  function syncBodyLock() {
+    const locked = elements.mobileMenu.classList.contains('open') ||
+      elements.filterPanel.classList.contains('is-open') ||
+      elements.productDrawer.classList.contains('is-open');
+    document.body.classList.toggle('is-locked', locked);
+  }
+
+  function closeMenu() {
+    elements.menuToggle.classList.remove('open');
+    elements.mobileMenu.classList.remove('open');
+    elements.menuBackdrop.classList.remove('open');
+    syncBodyLock();
+  }
+
+  function initMenu() {
+    elements.menuToggle.addEventListener('click', () => {
+      const open = !elements.mobileMenu.classList.contains('open');
+      if (open) closeFilter(false);
+      elements.menuToggle.classList.toggle('open', open);
+      elements.mobileMenu.classList.toggle('open', open);
+      elements.menuBackdrop.classList.toggle('open', open);
+      syncBodyLock();
+    });
+    elements.menuClose.addEventListener('click', closeMenu);
+    elements.menuBackdrop.addEventListener('click', closeMenu);
+    qsa('.mobile-link', elements.mobileMenu).forEach((link) => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+  }
+
+  function openFilter() {
+    closeMenu();
+    closeDrawer();
+    elements.filterBackdrop.hidden = false;
+    elements.filterPanel.classList.add('is-open');
+    elements.filterPanel.setAttribute('aria-hidden', 'false');
+    elements.filterToggle.setAttribute('aria-expanded', 'true');
+    syncBodyLock();
+    elements.filterClose.focus();
+  }
+
+  function closeFilter(restoreFocus) {
+    elements.filterPanel.classList.remove('is-open');
+    elements.filterPanel.setAttribute('aria-hidden', 'true');
+    elements.filterBackdrop.hidden = true;
+    elements.filterToggle.setAttribute('aria-expanded', 'false');
+    syncBodyLock();
+    if (restoreFocus !== false) elements.filterToggle.focus();
+  }
+
+  function initFilterPanel() {
+    elements.filterToggle.addEventListener('click', openFilter);
+    elements.filterClose.addEventListener('click', () => closeFilter());
+    elements.filterBackdrop.addEventListener('click', () => closeFilter());
+  }
+
+  function openDrawer(id) {
+    const product = products.find((item) => item.id === Number(id));
+    if (!product) return;
+    lastTrigger = document.activeElement;
+    closeMenu();
+    closeFilter(false);
+    elements.drawerContent.innerHTML = drawerHTML(product);
+    elements.drawerBackdrop.hidden = false;
+    syncBodyLock();
+    window.requestAnimationFrame(() => {
+      elements.productDrawer.classList.add('is-open');
+      elements.productDrawer.setAttribute('aria-hidden', 'false');
+      const close = qs('#drawerClose', elements.drawer);
+      if (close) close.focus();
+    });
+    initDrawerTilt();
+  }
+
+  function closeDrawer() {
+    if (!elements.productDrawer.classList.contains('is-open')) return;
+    elements.productDrawer.classList.remove('is-open');
+    elements.productDrawer.setAttribute('aria-hidden', 'true');
+    elements.drawerBackdrop.hidden = true;
+    syncBodyLock();
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+  }
+
+  function initDrawerTilt() {
+    const wrap = qs('.drawer-art-wrap', elements.drawer);
+    if (!wrap || !finePointer || reduceMotion) return;
+    wrap.addEventListener('pointermove', (event) => {
+      const rect = wrap.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      wrap.style.transform = 'perspective(900px) rotateX(' + (-y * 8).toFixed(2) + 'deg) rotateY(' + (x * 8).toFixed(2) + 'deg) translateZ(6px)';
+    });
+    wrap.addEventListener('pointerleave', () => { wrap.style.transform = ''; });
+  }
+
+  function initDrawer() {
+    elements.grid.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-open]');
+      if (button) openDrawer(button.dataset.open);
+    });
+    elements.drawerBackdrop.addEventListener('click', closeDrawer);
+    elements.drawerContent.addEventListener('click', (event) => {
+      if (event.target.closest('[data-close-drawer]')) closeDrawer();
+      const copy = event.target.closest('[data-copy]');
+      if (copy) copyText(copy.dataset.copy);
+    });
+  }
+
+  function showToast(message) {
+    elements.toast.innerHTML = '<i class="fa-solid fa-circle-check"></i>' + escapeHTML(message);
+    elements.toast.classList.add('show');
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => elements.toast.classList.remove('show'), 2600);
+  }
+
+  function fallbackCopy(text) {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand('copy'); showToast('SKU copiado al portapapeles'); }
+    catch (error) { showToast('No se pudo copiar el SKU'); }
+    document.body.removeChild(area);
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => showToast('SKU copiado al portapapeles')).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function initScroll() {
+    let ticking = false;
+    const sections = qsa('section[id]');
+    const navLinks = qsa('.nav-link');
+    function update() {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      elements.progress.style.width = (total > 0 ? Math.min(100, y / total * 100) : 0) + '%';
+      elements.navbar.classList.toggle('scrolled', y > 40);
+      elements.backTop.classList.toggle('show', y > 500);
+      let current = '';
+      sections.forEach((section) => { if (y >= section.offsetTop - 180) current = section.id; });
+      navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === '#' + current));
+      qsa('.mobile-link').forEach((link) => link.classList.toggle('active', link.getAttribute('href') === '#' + current));
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }, { passive: true });
+    elements.backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+    update();
+  }
+
+  function initRail() {
+    function scrollRail(dir) {
+      const card = elements.grid.querySelector('.pcard-wrap');
+      const step = (card ? card.offsetWidth : 260) + 20;
+      elements.grid.scrollBy({ left: dir * step, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    elements.railPrev.addEventListener('click', () => scrollRail(-1));
+    elements.railNext.addEventListener('click', () => scrollRail(1));
+    elements.grid.addEventListener('scroll', () => updateRailArrows(), { passive: true });
+    window.addEventListener('resize', () => updateRailArrows());
+
+    let dragging = false;
+    let startX = 0;
+    let startScroll = 0;
+    let moved = 0;
+    let justDragged = false;
+    elements.grid.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'mouse' || state.view !== 'rail') return;
+      dragging = true;
+      moved = 0;
+      startX = event.clientX;
+      startScroll = elements.grid.scrollLeft;
+    });
+    elements.grid.addEventListener('pointermove', (event) => {
+      if (!dragging) return;
+      const delta = event.clientX - startX;
+      elements.grid.scrollLeft = startScroll - delta;
+      moved = Math.max(moved, Math.abs(delta));
+    });
+    elements.grid.addEventListener('pointerup', () => { dragging = false; if (moved > 6) justDragged = true; });
+    elements.grid.addEventListener('pointerleave', () => { dragging = false; });
+    elements.grid.addEventListener('click', (event) => {
+      if (!justDragged) return;
+      event.preventDefault();
+      event.stopPropagation();
+      justDragged = false;
+    }, true);
+  }
+
+  function splitWords(element, step) {
+    if (!element || reduceMotion) return;
+    const gap = step || 0.045;
+    const walk = (node, delay, container) => {
+      Array.from(node.childNodes).forEach((child) => {
+        if (child.nodeType === 3) {
+          child.textContent.split(/(\s+)/).forEach((word) => {
+            if (!word) return;
+            if (/^\s+$/.test(word)) { container.appendChild(document.createTextNode(word)); return; }
+            const outer = document.createElement('span');
+            outer.className = 'split-word';
+            outer.style.setProperty('--d', delay + 's');
+            const inner = document.createElement('span');
+            inner.className = 'split-inner';
+            inner.textContent = word;
+            outer.appendChild(inner);
+            container.appendChild(outer);
+            delay += gap;
+          });
+        } else if (child.nodeType === 1) {
+          const outer = document.createElement('span');
+          outer.className = 'split-word';
+          outer.style.setProperty('--d', delay + 's');
+          const inner = document.createElement('span');
+          inner.className = 'split-inner';
+          child.parentNode.replaceChild(outer, child);
+          inner.appendChild(child);
+          outer.appendChild(inner);
+          delay = walk(child, delay, inner) + gap;
+        }
+      });
+      return delay;
+    };
+    walk(element, 0, element);
+  }
+
+  function activateHeroSlide(index) {
+    const slides = qsa('.hero-slide');
+    if (!slides.length) return;
+    heroIdx = (index + slides.length) % slides.length;
+    slides.forEach((slide, key) => {
+      slide.classList.toggle('active', key === heroIdx);
+      if (key === heroIdx) {
+        const content = qs('.hero-content', slide);
+        if (content) {
+          content.classList.remove('is-in');
+          void content.offsetWidth;
+          content.classList.add('is-in');
+        }
+      }
+    });
+    qsa('.hero-dot').forEach((dot, key) => dot.classList.toggle('active', key === heroIdx));
+  }
+
+  function restartHero() {
+    window.clearInterval(heroTimer);
+    if (!reduceMotion) heroTimer = window.setInterval(() => activateHeroSlide(heroIdx + 1), 6000);
+  }
+
+  function initHero() {
+    const slides = qsa('.hero-slide');
+    if (!slides.length) return;
+    slides.forEach((slide, index) => {
+      splitWords(qs('.hero-tag', slide), 0.12);
+      splitWords(qs('.hero-title', slide));
+      splitWords(qs('.hero-sub', slide), 0.025);
+      const dot = document.createElement('button');
+      dot.className = 'hero-dot' + (index === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (index + 1));
+      dot.addEventListener('click', () => { activateHeroSlide(index); restartHero(); });
+      elements.heroDots.appendChild(dot);
+    });
+    elements.heroPrev.addEventListener('click', () => { activateHeroSlide(heroIdx - 1); restartHero(); });
+    elements.heroNext.addEventListener('click', () => { activateHeroSlide(heroIdx + 1); restartHero(); });
+    activateHeroSlide(0);
+    restartHero();
+  }
+
+  function hidePreloader() {
+    if (elements.preloader) elements.preloader.classList.add('hide');
+  }
+
+  function initPreloader() {
+    hidePreloaderOnLoad();
+    if (reduceMotion || !elements.preloader || !elements.preloaderFill) {
+      hidePreloader();
+      return;
+    }
+    let percent = 0;
+    const timer = window.setInterval(() => {
+      percent = Math.min(100, percent + Math.random() * 18);
+      elements.preloaderFill.style.width = percent + '%';
+      if (percent >= 100) {
+        window.clearInterval(timer);
+        window.setTimeout(() => { hidePreloader(); activateHeroSlide(0); }, 350);
+      }
+    }, 90);
+  }
+
+  function hidePreloaderOnLoad() {
+    window.addEventListener('load', () => window.setTimeout(hidePreloader, 800));
+    window.setTimeout(hidePreloader, 3500);
+  }
+
+  function initTicker() {
+    if (!elements.tickerTrack) return;
+    elements.tickerTrack.innerHTML += elements.tickerTrack.innerHTML;
+  }
+
+  function isTyping(target) {
+    return target && (target.tagName === 'INPUT' || target.tagName === 'SELECT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+  }
+
+  function trapFocus(event, container) {
+    const focusables = qsa('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])', container);
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  }
+
+  function initKeyboard() {
+    document.addEventListener('keydown', (event) => {
+      if (event.key === '/' && !isTyping(event.target)) {
+        event.preventDefault();
+        elements.search.focus();
+      }
+      if (event.key === 'Escape') {
+        if (elements.productDrawer.classList.contains('is-open')) closeDrawer();
+        else if (elements.filterPanel.classList.contains('is-open')) closeFilter();
+        else if (elements.mobileMenu.classList.contains('open')) closeMenu();
+      }
+      if (event.key === 'Tab' && elements.productDrawer.classList.contains('is-open')) trapFocus(event, elements.productDrawer);
+    });
+  }
+
+  function initEffects() {
+    document.addEventListener('click', (event) => {
+      const target = event.target.closest('.btn-ripple, [data-ripple]');
+      if (!target) return;
+      const rect = target.getBoundingClientRect();
+      const ink = document.createElement('span');
+      const size = Math.max(rect.width, rect.height);
+      ink.className = 'ripple-ink';
+      ink.style.width = ink.style.height = size + 'px';
+      ink.style.left = (event.clientX - rect.left - size / 2) + 'px';
+      ink.style.top = (event.clientY - rect.top - size / 2) + 'px';
+      target.appendChild(ink);
+      window.setTimeout(() => ink.remove(), 700);
+    });
+
+    if (!finePointer || reduceMotion) return;
+    qsa('.btn-magnetic, [data-magnetic]').forEach((button) => {
+      button.addEventListener('pointermove', (event) => {
+        const rect = button.getBoundingClientRect();
+        const x = (event.clientX - (rect.left + rect.width / 2)) * 0.18;
+        const y = (event.clientY - (rect.top + rect.height / 2)) * 0.22;
+        button.style.transform = 'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px)';
+      });
+      button.addEventListener('pointerleave', () => { button.style.transform = ''; });
+    });
+  }
+
+  function initStoreData() {
+    elements.footerAddress.innerHTML = '<i class="fa-solid fa-location-dot"></i> ' + DATA.store.address;
+    elements.footerAddressMobile.textContent = DATA.store.address;
+    elements.footerPhone.textContent = DATA.store.phoneDisplay;
+    elements.footerPhone.href = 'tel:+' + DATA.store.phone;
+    elements.footerCount.textContent = products.length + ' productos';
+    elements.footerCatCount.textContent = categories.length + ' categorías';
+    const heroTag = qs('.hero-slide:nth-child(3) .hero-tag');
+    if (heroTag) heroTag.textContent = products.length + ' productos · ' + categories.length + ' categorías';
+  }
+
+  safe('store', initStoreData);
+  safe('preloader', initPreloader);
+  safe('hero', initHero);
+  safe('ticker', initTicker);
+  safe('menu', initMenu);
+  safe('categories', initCatAccordion);
+  safe('filters', initFilters);
+  safe('filterPanel', initFilterPanel);
+  safe('drawer', initDrawer);
+  safe('scroll', initScroll);
+  safe('rail', initRail);
+  safe('keyboard', initKeyboard);
+  safe('effects', initEffects);
+  safe('reveal', initReveal);
+  safe('render', render);
+})();
+
+  </script>
+</body>
+</html>
